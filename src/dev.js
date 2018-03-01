@@ -59,7 +59,7 @@ class App extends React.Component {
             <h3>justify:true/false</h3>
             <ReactAvatarInfo
               align='stretch'
-              justify='between'
+              justify='space-between'
               src="http://placeholder.qiniudn.com/80x80"
               elements={[
                 <div className="title"><b>title</b></div>,

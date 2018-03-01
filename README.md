@@ -13,14 +13,14 @@
     size: PropTypes.array,
     onAvatarClick: PropTypes.func,
     align: PropTypes.oneOf(['flex-start','center','flex-end','stretch']),
-    justify: PropTypes.oneOf(['between','around']),
+    justify: PropTypes.oneOf(['space-between','space-around']),
   };
 
   static defaultProps = {
     size:['50px'],
     gap:'10px',
     align: 'center',
-    justify:'between'
+    justify:'space-between'
   };
   
 ```
@@ -84,7 +84,7 @@ class App extends React.Component {
             <h3>justify:true/false</h3>
             <ReactAvatarInfo
               align='stretch'
-              justify='between'
+              justify='space-between'
               src="http://placeholder.qiniudn.com/80x80"
               elements={[
                 <div className="title"><b>title</b></div>,

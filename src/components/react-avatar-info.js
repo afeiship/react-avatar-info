@@ -15,14 +15,14 @@ export default class extends Component {
     size: PropTypes.array,
     onAvatarClick: PropTypes.func,
     align: PropTypes.oneOf(['flex-start','center','flex-end','stretch']),
-    justify: PropTypes.oneOf(['between','around']),
+    justify: PropTypes.oneOf(['space-between','space-around']),
   };
 
   static defaultProps = {
     size:['50px'],
     gap:'10px',
     align: 'center',
-    justify:'between'
+    justify:'space-between'
   };
   /*===properties end===*/
 

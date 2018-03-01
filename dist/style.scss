@@ -34,11 +34,11 @@ $react-avatar-info-options:(
     display: flex;
     flex-direction: column;
     //justify:
-    &[data-justify=between]{
+    &[data-justify=space-between]{
       justify-content: space-between;
     }
 
-    &[data-justify=around]{
+    &[data-justify=space-around]{
       justify-content: space-around;
     }
   }
