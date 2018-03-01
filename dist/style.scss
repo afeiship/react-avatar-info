@@ -1,0 +1,43 @@
+$react-avatar-info-options:(
+)!default;
+
+.react-avatar-info{
+  display: flex;
+
+  &[data-align=center]{
+    align-items: center;
+  }
+
+  &[data-align=space-between]{
+    .react-avatar-info-extra{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+
+  &[data-align=space-around]{
+    .react-avatar-info-extra{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+  }
+
+  &-img{
+    border-radius: 50%;
+    overflow: hidden;
+    >img{
+      border-radius: 50%;
+      width:100%;
+      height:100%;
+      vertical-align: middle;
+      object-fit: cover;
+    }
+  }
+
+  &-extra{
+    padding-left: 8px;
+    flex:1;
+  }
+}
