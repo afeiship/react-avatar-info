@@ -7,6 +7,10 @@ ul,li{list-style: none;}
 .hello-react-avatar-info{
   padding:50px 20px;
 
+  .react-avatar-info{
+    margin-bottom: 20px;
+  }
+
   button{
     border: none;
     display: block;

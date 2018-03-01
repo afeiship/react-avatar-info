@@ -20,7 +20,7 @@ export default class extends Component {
   static defaultProps = {
     size:['50px'],
     gap:'10px',
-    align: 'center',
+    align: null,
   };
   /*===properties end===*/
 

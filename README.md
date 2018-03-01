@@ -18,7 +18,7 @@
   static defaultProps = {
     size:['50px'],
     gap:'10px',
-    align: 'center',
+    align: null,
   };
   
 ```
@@ -47,10 +47,24 @@ class App extends React.Component{
         <ReactAvatarInfo gap="5px" src="http://placeholder.qiniudn.com/80x80" size={['40px']} elements={
           [
             <div style={{ fontWeight:'bold'}}>sldkfjlsdjf</div>,
-            <div style={{ marginTop:10 }}>title span</div>
+            <div style={{ marginTop:5 }}>title span</div>
           ]
-        } ref='rc' />
-      </div>
+        } ref='rc1' />
+
+        <ReactAvatarInfo gap="5px" src="http://placeholder.qiniudn.com/100x800" size={['50px']} elements={
+          [
+            <div style={{ color:'green'}}>sldkfjlsdjf</div>,
+            <div style={{ marginTop:20 }}>title span</div>
+          ]
+        } ref='rc2' />
+
+        <ReactAvatarInfo gap="5px" src="http://placeholder.qiniudn.com/800x100" size={['50px']} elements={
+          [
+            <div style={{ color:'red'}}>sldkfjlsdjf</div>,
+            <div style={{ marginTop:40 }}>title span</div>
+          ]
+        } ref='rc3' />
+    </div>
     );
   }
 }
