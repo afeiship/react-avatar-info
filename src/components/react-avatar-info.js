@@ -21,6 +21,7 @@ export default class extends Component {
   static defaultProps = {
     size:['50px'],
     gap:'10px',
+    radius:'100px',
     align: 'center',
     justify:'space-between'
   };
@@ -32,6 +33,7 @@ export default class extends Component {
       elements,
       src,
       gap,
+      radius,
       size,
       align,
       justify,
@@ -40,8 +42,12 @@ export default class extends Component {
     } = this.props;
     return (
       <section {...props} data-align={align} className={classNames('react-avatar-info', className)}>
-        <figure onClick={onAvatarClick} className="react-avatar-info-img" style={{ width:size[0], height:size[1] || size[0]}}>
-          <img src={src} alt=""/>
+        <figure onClick={onAvatarClick} className="react-avatar-info-img" style={{
+          borderRadius:radius,
+          width:size[0],
+          height:size[1] || size[0]
+        }}>
+          <img style={{ borderRadius:radius }} src={src} alt=""/>
         </figure>
         <aside className="react-avatar-info-extra" data-justify={justify} style={{ paddingLeft: gap }}>
           {

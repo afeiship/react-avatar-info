@@ -58,6 +58,7 @@ class App extends React.Component {
           <div className="col">
             <h3>justify:true/false</h3>
             <ReactAvatarInfo
+              radius="3px"
               align='stretch'
               justify='space-between'
               src="http://placeholder.qiniudn.com/80x80"

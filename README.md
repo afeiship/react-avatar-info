@@ -19,6 +19,7 @@
   static defaultProps = {
     size:['50px'],
     gap:'10px',
+    radius:'100px',
     align: 'center',
     justify:'space-between'
   };
@@ -83,6 +84,7 @@ class App extends React.Component {
           <div className="col">
             <h3>justify:true/false</h3>
             <ReactAvatarInfo
+              radius="3px"
               align='stretch'
               justify='space-between'
               src="http://placeholder.qiniudn.com/80x80"
