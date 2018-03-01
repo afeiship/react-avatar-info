@@ -2,13 +2,21 @@
 ul,li{list-style: none;}
 
 @import './components/style.scss';
+@import '../node_modules/webkit-sass-flexbox-grid/dist/webkit-sass-flexbox-grid.scss';
 
 
 .hello-react-avatar-info{
-  padding:50px 20px;
+  padding:10px;
 
   .react-avatar-info{
     margin-bottom: 20px;
+  }
+
+  h3{
+    padding:10px;
+    background: #eee;
+    border-left:3px solid #ccc;
+    margin-bottom: 10px;
   }
 
   button{

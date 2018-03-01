@@ -14,13 +14,15 @@ export default class extends Component {
     elements: PropTypes.array,
     size: PropTypes.array,
     onAvatarClick: PropTypes.func,
-    align: PropTypes.oneOf(['center','space-between','space-around'])
+    align: PropTypes.oneOf(['flex-start','center','flex-end','stretch']),
+    justify: PropTypes.oneOf(['between','around']),
   };
 
   static defaultProps = {
     size:['50px'],
     gap:'10px',
-    align: null,
+    align: 'center',
+    justify:'between'
   };
   /*===properties end===*/
 
@@ -32,6 +34,7 @@ export default class extends Component {
       gap,
       size,
       align,
+      justify,
       onAvatarClick,
       ...props
     } = this.props;
@@ -40,7 +43,7 @@ export default class extends Component {
         <figure onClick={onAvatarClick} className="react-avatar-info-img" style={{ width:size[0], height:size[1] || size[0]}}>
           <img src={src} alt=""/>
         </figure>
-        <aside className="react-avatar-info-extra" style={{ paddingLeft: gap }}>
+        <aside className="react-avatar-info-extra" data-justify={justify} style={{ paddingLeft: gap }}>
           {
             elements.map((elem,index)=>{
               return React.cloneElement(elem,{ key: index });

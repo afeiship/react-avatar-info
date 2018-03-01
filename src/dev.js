@@ -6,48 +6,75 @@ import ReactAvatarInfo from './main';
 // install: npm install afeiship/react-avatar-info --save
 // import : import ReactAvatarInfo from 'react-avatar-info'
 
-class App extends React.Component{
-  state = {
+class App extends React.Component {
+  state = {};
 
-  };
-
-  constructor(props){
+  constructor(props) {
     super(props);
     window.demo = this;
     window.refs = this.refs;
     window.rc = this.refs.rc;
   }
 
-  render(){
+  render() {
     return (
       <div className="hello-react-avatar-info">
-        <ReactAvatarInfo gap="5px" src="http://placeholder.qiniudn.com/80x80" size={['40px']} elements={
-          [
-            <div style={{ fontWeight:'bold'}}>sldkfjlsdjf</div>,
-            <div style={{ marginTop:5 }}>title span</div>
-          ]
-        } ref='rc1' />
-
-        <ReactAvatarInfo gap="5px" src="http://placeholder.qiniudn.com/100x800" size={['50px']} elements={
-          [
-            <div style={{ color:'green'}}>sldkfjlsdjf</div>,
-            <div style={{ marginTop:20 }}>title span</div>
-          ]
-        } ref='rc2' />
-
-        <ReactAvatarInfo gap="5px" src="http://placeholder.qiniudn.com/800x100" size={['50px']} elements={
-          [
-            <div style={{ color:'red'}}>sldkfjlsdjf</div>,
-            <div style={{ marginTop:40 }}>title span</div>
-          ]
-        } ref='rc3' />
-    </div>
+        <div className="row">
+          <div className="col">
+            <h3>Align:center/top/bottom</h3>
+            <ReactAvatarInfo
+              align='center'
+              src="http://placeholder.qiniudn.com/80x80"
+              elements={[
+                <div className="title"><b>title</b></div>,
+                <div className="description">desc1</div>,
+                <div className="description">title</div>,
+                <div className="description">desc</div>
+              ]}
+            />
+            <ReactAvatarInfo
+              align='flex-start'
+              src="http://placeholder.qiniudn.com/80x80"
+              elements={[
+                <div className="title"><b>title</b></div>,
+                <div className="description">desc1</div>,
+                <div className="description">title</div>,
+                <div className="description">desc</div>
+              ]}
+            />
+            <ReactAvatarInfo
+              align='flex-end'
+              src="http://placeholder.qiniudn.com/80x80"
+              elements={[
+                <div className="title"><b>title</b></div>,
+                <div className="description">desc1</div>,
+                <div className="description">title</div>,
+                <div className="description">desc</div>
+              ]}
+            />
+          </div>
+        </div>
+        <div className="row">
+          <div className="col">
+            <h3>justify:true/false</h3>
+            <ReactAvatarInfo
+              align='stretch'
+              justify='between'
+              src="http://placeholder.qiniudn.com/80x80"
+              elements={[
+                <div className="title"><b>title</b></div>,
+                <div className="description">desc</div>
+              ]}
+            />
+          </div>
+        </div>
+      </div>
     );
   }
 }
 /*===example end===*/
 
 ReactDOM.render(
-    <App />,
-    document.getElementById('app')
+  <App />,
+  document.getElementById('app')
 );

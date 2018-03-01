@@ -1,24 +1,20 @@
 $react-avatar-info-options:(
 )!default;
 
-@mixin react-avatar-info-extra-align($align){
-  .react-avatar-info-extra{
-    display: flex;
-    flex-direction: column;
-    justify-content: $align;
-  }
-}
-
 .react-avatar-info{
   display: flex;
-  align-items: center;
-
-  &[data-align=space-between]{
-    @include react-avatar-info-extra-align(space-between);
+  //align:
+  &[data-align=stretch]{
+    align-items: stretch;
   }
-
-  &[data-align=space-around]{
-    @include react-avatar-info-extra-align(space-around);
+  &[data-align=flex-start]{
+    align-items: flex-start;
+  }
+  &[data-align=center]{
+    align-items: center;
+  }
+  &[data-align=flex-end]{
+    align-items: flex-end;
   }
 
   &-img{
@@ -35,5 +31,15 @@ $react-avatar-info-options:(
 
   &-extra{
     flex:1;
+    display: flex;
+    flex-direction: column;
+    //justify:
+    &[data-justify=between]{
+      justify-content: space-between;
+    }
+
+    &[data-justify=around]{
+      justify-content: space-around;
+    }
   }
 }
