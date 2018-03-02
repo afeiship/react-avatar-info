@@ -9,6 +9,7 @@
     className: PropTypes.string,
     src: PropTypes.string,
     gap: PropTypes.string,
+    extra: PropTypes.element,
     elements: PropTypes.array,
     size: PropTypes.array,
     onAvatarClick: PropTypes.func,

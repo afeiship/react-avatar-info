@@ -11,6 +11,7 @@ export default class extends Component {
     className: PropTypes.string,
     src: PropTypes.string,
     gap: PropTypes.string,
+    extra: PropTypes.element,
     elements: PropTypes.array,
     size: PropTypes.array,
     onAvatarClick: PropTypes.func,
@@ -33,6 +34,7 @@ export default class extends Component {
       elements,
       src,
       gap,
+      extra,
       radius,
       size,
       align,
@@ -48,6 +50,7 @@ export default class extends Component {
           height:size[1] || size[0]
         }}>
           <img style={{ borderRadius:radius }} src={src} alt=""/>
+          { extra }
         </figure>
         <aside className="react-avatar-info-extra" data-justify={justify} style={{ paddingLeft: gap }}>
           {
