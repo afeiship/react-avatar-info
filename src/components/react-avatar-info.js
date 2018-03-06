@@ -9,6 +9,7 @@ export default class extends Component {
   /*===properties start===*/
   static propTypes = {
     className: PropTypes.string,
+    radius: PropTypes.string,
     gap: PropTypes.string,
     avatar: PropTypes.element,
     extra: PropTypes.element,

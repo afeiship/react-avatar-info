@@ -7,8 +7,9 @@
 
   static propTypes = {
     className: PropTypes.string,
-    src: PropTypes.string,
+    radius: PropTypes.string,
     gap: PropTypes.string,
+    avatar: PropTypes.element,
     extra: PropTypes.element,
     elements: PropTypes.array,
     size: PropTypes.array,
@@ -52,6 +53,8 @@ class App extends React.Component {
             <ReactAvatarInfo
               align='center'
               src="http://placeholder.qiniudn.com/80x80"
+              avatar={<img src="http://placeholder.qiniudn.com/80x80" />}
+              extra={<a href="#">More</a>}
               elements={[
                 <div className="title"><b>title</b></div>,
                 <div className="description">desc1</div>,
@@ -61,7 +64,7 @@ class App extends React.Component {
             />
             <ReactAvatarInfo
               align='flex-start'
-              src="http://placeholder.qiniudn.com/80x80"
+              avatar={<img src="http://placeholder.qiniudn.com/80x80" />}
               elements={[
                 <div className="title"><b>title</b></div>,
                 <div className="description">desc1</div>,
@@ -71,7 +74,7 @@ class App extends React.Component {
             />
             <ReactAvatarInfo
               align='flex-end'
-              src="http://placeholder.qiniudn.com/80x80"
+              avatar={<img src="http://placeholder.qiniudn.com/80x80" />}
               elements={[
                 <div className="title"><b>title</b></div>,
                 <div className="description">desc1</div>,
@@ -83,12 +86,11 @@ class App extends React.Component {
         </div>
         <div className="row">
           <div className="col">
-            <h3>justify:true/false</h3>
+            <h3>justify: space-between /space-around</h3>
             <ReactAvatarInfo
-              radius="3px"
               align='stretch'
-              justify='space-between'
-              src="http://placeholder.qiniudn.com/80x80"
+              justify='space-around'
+              avatar={<img src="http://placeholder.qiniudn.com/80x80" />}
               elements={[
                 <div className="title"><b>title</b></div>,
                 <div className="description">desc</div>
