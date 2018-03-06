@@ -9,8 +9,8 @@ export default class extends Component {
   /*===properties start===*/
   static propTypes = {
     className: PropTypes.string,
-    src: PropTypes.string,
     gap: PropTypes.string,
+    avatar: PropTypes.element,
     extra: PropTypes.element,
     elements: PropTypes.array,
     size: PropTypes.array,
@@ -32,8 +32,8 @@ export default class extends Component {
     const {
       className,
       elements,
-      src,
       gap,
+      avatar,
       extra,
       radius,
       size,
@@ -44,21 +44,21 @@ export default class extends Component {
     } = this.props;
     return (
       <section {...props} data-align={align} className={classNames('react-avatar-info', className)}>
-        <figure onClick={onAvatarClick} className="react-avatar-info-img" style={{
+        <figure onClick={onAvatarClick} className="react-avatar-info-avatar" style={{
           borderRadius:radius,
           width:size[0],
           height:size[1] || size[0]
         }}>
-          <img style={{ borderRadius:radius }} src={src} alt=""/>
-          { extra }
+          { avatar }
         </figure>
-        <aside className="react-avatar-info-extra" data-justify={justify} style={{ paddingLeft: gap }}>
+        <aside className="react-avatar-info-elements" data-justify={justify} style={{ paddingLeft: gap }}>
           {
             elements.map((elem,index)=>{
               return React.cloneElement(elem,{ key: index });
             })
           }
         </aside>
+        { extra }
       </section>
     );
   }
