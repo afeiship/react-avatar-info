@@ -24,7 +24,6 @@ class App extends React.Component {
             <h3>Align:center/top/bottom</h3>
             <ReactAvatarInfo
               align='center'
-              src="http://placeholder.qiniudn.com/80x80"
               avatar={<img src="http://placeholder.qiniudn.com/80x80" />}
               extra={<a href="#">More</a>}
               elements={[
